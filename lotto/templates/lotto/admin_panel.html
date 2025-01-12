@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>관리자 페이지</title>
+</head>
+<body>
+    <h1>관리자 페이지</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit" name="draw">당첨 번호 생성</button>
+    </form>
+
+    <h2>현재 통계</h2>
+    <p>총 구매된 로또 수: {{ total_tickets }}</p>
+    <p>총 당첨자 수: {{ total_winners }}</p>
+
+    <h2>모든 당첨 번호</h2>
+    <ul>
+        {% for winning in winning_numbers_list %}
+            <li>{{ winning.draw_date }}: {{ winning.numbers }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>로또 구매</title>
+</head>
+<body>
+    <h1>로또 구매</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit" name="auto">자동 구매</button> <!-- 자동 구매 버튼 -->
+        <br><br>
+        <label>직접 번호 입력 (쉼표로 구분):</label>
+        <input type="text" name="numbers" placeholder="1,2,3,4,5,6">
+        <br>
+        <label>비밀번호 (4자리):</label>
+        <input type="text" name="password" placeholder="비밀번호" required>
+        <br>
+        <button type="submit">수동 구매</button>
+    </form>
+    <a href="/">메인으로</a>
+</body>
+</html>

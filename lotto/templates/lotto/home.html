@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>로또 메인</title>
+</head>
+<body>
+    <h1>로또 서비스</h1>
+    <p>지난 회차 당첨 번호: {{ last_winning.numbers }}</p>
+    <p>당첨자 수: {{ last_winning.total_winners }}</p>
+    <a href="/buy/">로또 구매하기</a>
+    <a href="/check/">내 로또 번호 확인</a>
+</body>
+</html>

@@ -1,0 +1,13 @@
+# Python 관련
+__pycache__/
+*.py[cod]
+
+# 가상환경 폴더
+venv/
+
+# Django 관련
+db.sqlite3
+staticfiles/
+
+# 환경 파일
+.env
