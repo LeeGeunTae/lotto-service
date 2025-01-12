@@ -28,3 +28,23 @@ Django와 Docker를 사용하여 구축된 로또 서비스 프로젝트입니�
    - 메인 화면 : http://127.0.0.1:8000
    - 로또 번호 확인 : http://127.0.0.1:8000/check
    - 관리자 페이지 : http://127.0.0.1:8000/admin
+
+## 프로젝트 구조도
+lotto_service/
+├── manage.py                     # Django 관리 명령어
+├── lotto_project/                # Django 프로젝트 디렉토리
+│   ├── settings.py               # Django 설정 파일
+│   ├── urls.py                   # 프로젝트 URL 설정
+├── lotto/                        # 로또 앱 디렉토리
+│   ├── models.py                 # 데이터베이스 모델
+│   ├── views.py                  # 뷰 로직
+│   ├── templates/lotto/          # 템플릿 디렉토리
+│   │   ├── home.html             # 메인 화면 템플릿
+│   │   ├── buy.html              # 구매 화면 템플릿
+│   │   ├── check.html            # 확인 화면 템플릿
+│   │   └── admin_panel.html      # 관리자 화면 템플릿
+│   ├── static/css/               # 정적 파일 디렉토리
+│   │   └── style.css             # CSS 스타일
+├── Dockerfile                    # Docker 설정 파일
+├── docker-compose.yml            # Docker Compose 설정 파일
+└── requirements.txt              # Python 패키지 의존성
